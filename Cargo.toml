@@ -4,3 +4,10 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+dioxus = { optional = true }
+yew = {optional = true }
+
+[features]
+default = []
+dioxus = ["dioxus"]
+yew = ["yew"]
