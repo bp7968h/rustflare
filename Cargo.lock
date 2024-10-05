@@ -691,7 +691,7 @@ dependencies = [
 
 [[package]]
 name = "dioxus_example"
-version = "0.1.0"
+version = "0.0.1"
 dependencies = [
  "dioxus",
  "dioxus-logger",
@@ -2118,7 +2118,7 @@ dependencies = [
 
 [[package]]
 name = "rustflare"
-version = "0.1.0"
+version = "0.0.1"
 dependencies = [
  "dioxus",
  "yew",
@@ -3155,7 +3155,7 @@ dependencies = [
 
 [[package]]
 name = "yew_example"
-version = "0.1.0"
+version = "0.0.1"
 dependencies = [
  "rustflare",
  "wasm-bindgen",

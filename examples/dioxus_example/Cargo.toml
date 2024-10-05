@@ -1,11 +1,12 @@
 [package]
 name = "dioxus_example"
-version = "0.1.0"
-authors = ["Bhuwan Pandit <bhuwanpandit109@gmail.com>"]
-edition = "2021"
+edition.workspace = true
+version.workspace = true
+authors.workspace = true
+description.workspace = true
 
 [dependencies]
-rustflare = { path = "../../rustflare", features = ["dioxus"] }
+rustflare = { path = "../../rustflare", features = ["dioxus"]}
 dioxus = { workspace = true, features = ["web", "router"] }
 # Debug
 dioxus-logger = "0.5.1"

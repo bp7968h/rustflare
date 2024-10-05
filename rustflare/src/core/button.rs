@@ -5,7 +5,9 @@ pub struct ButtonProps {
     pub class: String
 }
 
-pub trait ButtonTrait<T> {
-    fn render(&self) -> T;
+pub trait ButtonTrait {
+    type RenderType;
+
+    fn render(&self) -> Self::RenderType;
     fn set_props(&mut self, props: ButtonProps);
 }

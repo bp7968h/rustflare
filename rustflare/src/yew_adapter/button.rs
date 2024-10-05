@@ -5,7 +5,9 @@ use crate::components::Button;
 
 // Implement ButtonTrait for Yew with return type Html
 #[cfg(feature = "yew")]
-impl ButtonTrait<Html> for Button {
+impl ButtonTrait for Button {
+    type RenderType = Html;
+    
     fn render(&self) -> Html {
         let on_click = self.props.on_click.clone();
         html! {

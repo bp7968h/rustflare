@@ -5,7 +5,9 @@ use crate::components::Button;
 
 
 #[cfg(feature = "dioxus")]
-impl ButtonTrait<Element> for Button {
+impl ButtonTrait for Button {
+    type RenderType = Element;
+
     fn render(&self) -> Element {
         let on_click = self.props.on_click.clone();
         rsx! {

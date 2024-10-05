@@ -5,6 +5,13 @@ members = [
     "examples/dioxus_example",
     "examples/yew_example",
 ]
+default-members = ["rustflare"]
+
+[workspace.package]
+edition = "2021"
+version = "0.0.1"
+authors = ["Bhuwan Pandit <bhuwanpandit109@gmail.com>"]
+description = "A Tailwind-inspired, cross-framework UI component library for Rust."
 
 [workspace.dependencies]
 dioxus = {version = "0.5"}

@@ -16,7 +16,7 @@ fn app() -> Html {
     };
 
     // Create a new instance of the Button component
-    let button = Button::new("+1");
+    let mut button = Button::new("+1");
     button.set_on_click(onclick);
 
     html! {

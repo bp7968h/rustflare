@@ -1,7 +1,9 @@
 [package]
 name = "yew_example"
-version = "0.1.0"
-edition = "2021"
+edition.workspace = true
+version.workspace = true
+authors.workspace = true
+description.workspace = true
 
 [dependencies]
 yew = { workspace = true, features = ["csr"] }
