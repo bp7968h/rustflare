@@ -1,13 +1,11 @@
-[package]
-name = "rustflare"
-version = "0.1.0"
-edition = "2021"
+[workspace]
+resolver = "2"
+members = [
+    "rustflare",
+    "examples/dioxus_example",
+    "examples/yew_example",
+]
 
-[dependencies]
-dioxus = { optional = true }
-yew = {optional = true }
-
-[features]
-default = []
-dioxus = ["dioxus"]
-yew = ["yew"]
+[workspace.dependencies]
+dioxus = {version = "0.5"}
+yew = {version = "0.21.0"}

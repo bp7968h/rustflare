@@ -1,0 +1,13 @@
+[package]
+name = "rustflare"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dioxus = { workspace = true, optional = true }
+yew = { workspace = true, optional = true }
+
+[features]
+default = []
+yew = ["dep:yew"]
+dioxus = ["dep:dioxus"]
