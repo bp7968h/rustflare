@@ -1,8 +1,9 @@
 #![allow(non_snake_case)]
 
-use dioxus::prelude::*;
-use rustflare::Button;
+use rustflare::components::{Button, ButtonSize, ButtonVariant};
 use rustflare::core::ButtonTrait;
+
+use dioxus::prelude::*;
 use dioxus_logger::tracing::{Level, info};
 const _TAILWIND_URL: &str = manganis::mg!(file("public/tailwind.css"));
 
@@ -15,15 +16,33 @@ fn main() {
 
 
 fn App() -> Element {
-    // Initialize a button component
-    let mut button = Button::new("Click Me");
-    
-    // Set an on-click handler that logs to the console
-    button.set_on_click(|| {
-        web_sys::console::log_1(&"Button clicked!".into());
+    // Create buttons with different variants and sizes
+    let mut primary_button = Button::new("Primary Button", ButtonVariant::Default, ButtonSize::Medium);
+    let mut secondary_button = Button::new("Secondary Button", ButtonVariant::Secondary, ButtonSize::Large);
+    let mut destructive_button = Button::new("Destructive Button", ButtonVariant::Destructive, ButtonSize::Small);
+
+    // Set on-click handlers for each button
+    primary_button.set_on_click(|| {
+        web_sys::console::log_1(&"Primary Button clicked!".into());
     });
-    
-    // Render the button inside Dioxus's rsx!
-    button.render()
+
+    secondary_button.set_on_click(|| {
+        web_sys::console::log_1(&"Secondary Button clicked!".into());
+    });
+
+    destructive_button.set_on_click(|| {
+        web_sys::console::log_1(&"Destructive Button clicked!".into());
+    });
+
+
+    // primary_button.render()
+    rsx!{
+        div {
+            class: "flex flex-col space-y-4",
+            {primary_button.render()},
+            {secondary_button.render()},
+            {destructive_button.render()},
+        }
+    }
 }
 

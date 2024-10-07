@@ -10,7 +10,7 @@ dioxus = { workspace = true, optional = true }
 yew = { workspace = true, optional = true }
 
 [features]
-default = []
 yew = ["dep:yew"]
 dioxus = ["dep:dioxus"]
-mutually_exclusive = ["dioxus", "yew"]
+mutually_exclusive = ["yew", "dioxus"]
+default = []
